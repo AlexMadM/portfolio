@@ -5,6 +5,8 @@ export const theme ={
         secondaryBg:'#252527',
         accent:'#7572d5',
 
-        font:'#FFFFFF'
+        font:'#FFFFFF',
+        borderColor:'#4A4A4A',
+        placeholdeColor:'#495057'
     }
 }
