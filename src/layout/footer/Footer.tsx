@@ -44,7 +44,7 @@ const Name = styled.span`
 `
 
 const SocialList = styled.ul`
-    display: flex;
+  display: flex;
   gap: 20px;
   margin: 30px 0;
 `
@@ -72,6 +72,10 @@ const Copyright = styled.small
     
     `
 const SocialItem = styled.li`
+  flex-direction: row;
+  display: flex;
+  gap: 20px;
+  margin: 30px 0;
 `
 
 export default Footer;
