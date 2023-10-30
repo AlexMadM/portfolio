@@ -1,28 +1,4 @@
-import React from 'react';
 import styled from "styled-components";
-import {theme} from "../../../styles/Theme";
-
-const Menu: React.FC<{ menuItems: Array<string> }> = (props: { menuItems: Array<string> }) => {
-    return (
-        <ul>
-            {props.menuItems.map((item, i) => {
-                return <ListItem key={i}>
-                    <Link href="">{item}
-                        <Mask>
-                            <span>{item}</span>
-                        </Mask>
-                        <Mask>
-                            <span>{item}</span>
-                        </Mask>
-                    </Link>
-                </ListItem>
-            })}
-        </ul>
-    );
-};
-
-export default Menu;
-
 
 const Link = styled.a`
   color: #7572D5;
