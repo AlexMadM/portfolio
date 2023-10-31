@@ -1,11 +1,11 @@
 import React from 'react';
-import styled from "styled-components";
-import {theme} from "../../../../styles/Theme";
+
+import {S} from '../../HeaderMenu_Stules'
 import Menu from "../menu/Menu";
 
 const DesktopMenu:React.FC<{menuItems:Array<string>}> = (props:{menuItems:Array<string>}) => {
     return (
-        <StyledDesktopMenu>
+        <S.DesktopMenu>
             <Menu menuItems={props.menuItems}/>
             {  /*     <ul>
                 {props.menuItems.map((item,i)=>
@@ -22,21 +22,12 @@ const DesktopMenu:React.FC<{menuItems:Array<string>}> = (props:{menuItems:Array<
                     </ListItem>
                 })}
             </ul>*/}
-        </StyledDesktopMenu>
+        </S.DesktopMenu>
     );
 };
 
 export default DesktopMenu;
 
-const StyledDesktopMenu = styled.nav`
-ul{
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  
-}
-  
-  
-`
+
 
 

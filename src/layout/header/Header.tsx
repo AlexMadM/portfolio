@@ -2,9 +2,11 @@ import React, {useState} from 'react';
 import Logo from "../../components/logo/Logo";
 import {Container} from "../../components/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
-import MobileMenu from "./mobileMenu/MobileMenu";
+
 import {S} from './Header_Styles'
-import DesktopMenu from "./desktopMenu/DesktopMenu";
+import MobileMenu from "./headerMenu/mobileMenu/MobileMenu";
+import DesktopMenu from "./headerMenu/desktopMenu/DesktopMenu";
+
 
 const items = ['Home', 'Skills', 'Works', 'Testimony', 'Contact']
 
