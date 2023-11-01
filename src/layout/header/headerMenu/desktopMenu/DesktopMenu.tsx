@@ -7,21 +7,7 @@ const DesktopMenu:React.FC<{menuItems:Array<string>}> = (props:{menuItems:Array<
     return (
         <S.DesktopMenu>
             <Menu menuItems={props.menuItems}/>
-            {  /*     <ul>
-                {props.menuItems.map((item,i)=>
-                {
-                    return <ListItem key={i}>
-                        <Link href="">{item}
-                        <Mask>
-                            <span>{item}</span>
-                        </Mask>
-                            <Mask>
-                                <span>{item}</span>
-                            </Mask>
-                        </Link>
-                    </ListItem>
-                })}
-            </ul>*/}
+
         </S.DesktopMenu>
     );
 };

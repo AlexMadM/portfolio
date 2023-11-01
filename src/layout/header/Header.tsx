@@ -24,8 +24,7 @@ const Header: React.FC = () => {
                     <FlexWrapper justify={'space-between'} align={'center'}>
                         <Logo/>
                         {width < breakpoint ? <MobileMenu menuItems={items}/> : <DesktopMenu menuItems={items}/>}
-                        <DesktopMenu menuItems={items}/>
-                        <MobileMenu menuItems={items}/>
+
                     </FlexWrapper>
 
                 </Container>
