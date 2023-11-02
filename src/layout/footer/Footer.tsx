@@ -1,81 +1,47 @@
 import React from 'react';
 import Icon from "../../components/icon/Icon";
-import styled from "styled-components";
 import {FlexWrapper} from "../../components/FlexWrapper";
-import {theme} from "../../styles/Theme";
-import {font} from "../../styles/Common";
+import {S} from '../footer/Footer_Styles'
+const socialItemsData = [
+    {
+        iconId: 'instagram'
 
-const Footer = () => {
+    },
+    {
+        iconId: 'telegram'
+
+    },
+    {
+        iconId: 'vk'
+
+    },
+    {
+        iconId: 'linkedin'
+
+    },
+]
+
+const Footer: React.FC = () => {
     return (
-        <StyledFooter>
+        <S.Footer>
             <FlexWrapper direction={'column'} align={'center'}>
-                <Name>Alexander</Name>
-                <SocialList>
-                    <SocialItem>
-                        <SocialLink>
-                            <Icon height={'21px'}width={'21px'} viewBox={'0 0 21'} iconId={'instagram'}/>
-                        </SocialLink>
-                        <SocialLink>
-                            <Icon height={'21px'}width={'21px'} viewBox={'0 0 21'} iconId={'telegram'}/>
-                        </SocialLink>
-                        <SocialLink>
-                            <Icon height={'21px'}width={'21px'} viewBox={'0 0 21'} iconId={'vk'}/>
-                        </SocialLink>
-                        <SocialLink>
-                            <Icon height={'21px'}width={'21px'} viewBox={'0 0 21'} iconId={'linkedin'}/>
-                        </SocialLink>
-                    </SocialItem>
-                </SocialList>
-                <Copyright>© 2023 Alexander, All Rights Reserved.</Copyright>
+                <S.Name>Alexander</S.Name>
+                <S.SocialList>
+                    {socialItemsData.map((i, k) => {
+                        return <S.SocialItem>
+                            <S.SocialLink key={k}>
+                                <Icon height={'21px'} width={'21px'} viewBox={'0 0 21'} iconId={i.iconId}/>
+                            </S.SocialLink>
+                        </S.SocialItem>
+                    })}
+
+                </S.SocialList>
+                <S.Copyright>© 2023 Alexander, All Rights Reserved.</S.Copyright>
             </FlexWrapper>
 
-        </StyledFooter>
+        </S.Footer>
     );
 };
 
-const StyledFooter = styled.footer`
-    background-color: ${theme.colors.primaryBg};
-  padding: 40px 0;
-`
-const Name = styled.span`
- 
-  letter-spacing: 3px;
- ${font({family:'Josefin Sans,sans-serif',weight:700,Fmax:22,Fmin:16})}
-`
-
-const SocialList = styled.ul`
-  display: flex;
-  gap: 20px;
-  margin: 30px 0;
-`
-const SocialLink = styled.a`
-  border-radius: 50px;
-  background: rgba(255, 255, 255, 0.10);
-  width: 35px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: ${theme.colors.accent};
-  
-  &:hover{
-    color: ${theme.colors.primaryBg};
-    transform: translateY(-4px);
-  }
-`
-const Copyright = styled.small
-    `
-    opacity: 0.5;
-      text-align: center;
-      font-size: 12px;
-      font-weight: 400;
-    
-    `
-const SocialItem = styled.li`
-  flex-direction: row;
-  display: flex;
-  gap: 20px;
-  margin: 30px 0;
-`
 
 export default Footer;

@@ -9,7 +9,7 @@ import {Container} from "../../../components/Container";
 
 
 
-const Testimony = () => {
+const Testimony:React.FC = () => {
     return (
         <StyledTestimony>
             <Container>
