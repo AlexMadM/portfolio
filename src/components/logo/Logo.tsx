@@ -1,9 +1,11 @@
 import React from 'react';
 import Icon from "../icon/Icon";
+import {  animateScroll as scroll } from 'react-scroll';
 
 const Logo = () => {
     return (
-        <Icon iconId={'code'}/>
+        <a onClick={()=>{scroll.scrollToTop()}}> <Icon iconId={'code'}/></a>
+
     );
 };
 

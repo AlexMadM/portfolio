@@ -67,7 +67,7 @@ const Works: React.FC = () => {
     }
 
     return (
-        <StyledWorks>
+        <StyledWorks id={'works'}>
             <Container>
                 <SectionTitle>My Works</SectionTitle>
                 <TabMenu currentFilterStatus={currentFilterStatus}  changeFilterStatus={changeFilterStatus} tabsItems={tabsItems}/>

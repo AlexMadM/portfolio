@@ -5,7 +5,7 @@ import Menu from "../menu/Menu";
 
 
 
-const MobileMenu: React.FC<{ menuItems: Array<string> }> = (props: { menuItems: Array<string> }) => {
+const MobileMenu: React.FC = () => {
 
 const [menuIsOpen, setMenuIsOpen] = useState(false)
     const onBurgerBtn =()=>{setMenuIsOpen(!menuIsOpen)}
@@ -16,7 +16,7 @@ const [menuIsOpen, setMenuIsOpen] = useState(false)
                 <span></span>
             </S.BurgerButton>
             <S.MobileMenuPopup isOpen={menuIsOpen} onClick={()=>{setMenuIsOpen(false)}}>
-                <Menu menuItems={props.menuItems}/>
+                <Menu />
             </S.MobileMenuPopup>
 
         </S.MobileMenu>
