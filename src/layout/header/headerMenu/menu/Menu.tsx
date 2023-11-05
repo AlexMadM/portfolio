@@ -1,7 +1,7 @@
 import React from 'react';
 import {S} from './../../HeaderMenu_Stules'
 
-/*const items = ['Home', 'Skills', 'Works', 'Testimony', 'Contact']*/
+
 
 const items = [
     {
